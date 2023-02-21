@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:syncfusion="clr-namespace:Syncfusion.Maui.DataGrid;assembly=Syncfusion.Maui.DataGrid"
+             xmlns:local="clr-namespace:DataGridMAUI"
+             x:Class="DataGridMAUI.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:StyleConverter x:Key="styleConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.BindingContext>
+        <local:ViewModel x:Name="viewModel" />
+    </ContentPage.BindingContext>
+
+
+        <syncfusion:SfDataGrid x:Name="dataGrid" 
+                      ItemsSource="{Binding OrdersInfo}"
+                               AutoGenerateColumnsMode="None">
+            <syncfusion:SfDataGrid.Columns>
+                <syncfusion:DataGridTextColumn HeaderText="Order ID" MappingName="OrderID"/>
+                <syncfusion:DataGridTextColumn HeaderText="Employee ID" MappingName="EmployeeID"/>
+                <syncfusion:DataGridTextColumn HeaderText="Freight" MappingName="Freight"/>
+                <syncfusion:DataGridTextColumn HeaderText="First Name" MappingName="FirstName"/>
+                <syncfusion:DataGridTextColumn HeaderText="Last Name" MappingName="LastName"/>
+                <syncfusion:DataGridTextColumn HeaderText="ShipCity" MappingName="ShipCity"/>
+                <syncfusion:DataGridTextColumn HeaderText="Customer ID" MappingName="CustomerID"/>
+            </syncfusion:SfDataGrid.Columns>
+        </syncfusion:SfDataGrid>
+
+</ContentPage>
