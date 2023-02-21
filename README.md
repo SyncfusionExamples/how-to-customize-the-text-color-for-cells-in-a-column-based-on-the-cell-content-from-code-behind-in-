@@ -52,7 +52,7 @@ public partial class MainPage : ContentPage
     }
 }
 ```
-![CellTextColor chnaged based on condition](DataGridCellTextColor.png)
+![CellTextColor](DataGridCellTextColor.png)
 ## Conclusion
 I hope you enjoyed learning about how to you to customize the Textcolor of the cells in a DataGridColumn based on the DataGridCell content from code behind in MAUI DataGrid (SfDataGrid).
 
